@@ -1,0 +1,18 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  box-sizing: border-box;
+}
+
+#app {
+  display: flex;
+  min-height: 100vh;
+  background-color: hsl(233, 47%, 7%);
+  align-items: center;
+  justify-content: center;
+}

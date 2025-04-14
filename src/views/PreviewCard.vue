@@ -17,7 +17,14 @@
     </div>
 
     <div class="card__img-wrapper">
-      <img src="@/assets/images/image-header-desktop.jpg" alt="" />
+      <picture>
+        <!-- 在屏幕宽度小于 768px 时，加载手机尺寸的图片 -->
+        <source media="(max-width: 768px)" srcset="@/assets/images/image-header-mobile.jpg" />
+        <!-- 在屏幕宽度大于或等于 768px 时，加载桌面尺寸的图片 -->
+        <source media="(min-width: 768px)" srcset="@/assets/images/image-header-desktop.jpg" />
+        <!-- 如果上面的 media 查询不匹配，加载默认图片 -->
+        <img src="@/assets/images/image-header-desktop.jpg" alt="Responsive Image" />
+      </picture>
     </div>
   </div>
 </template>
